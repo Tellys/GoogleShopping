@@ -44,6 +44,13 @@ class Creare_GoogleShopping_Model_Feed extends Mage_Core_Model_Abstract
                         <?php echo $attributeSetName ?>
                         ]]>
                         </g:product_type>
+
+			<g:gtin>
+	                <![CDATA[
+                        <?php echo $product->getResource()->getAttribute('ean')->getFrontend()->getValue($product); ?>
+			]]>
+                     	</g:gtin>
+
                         
                         <g:google_product_category>
                         <![CDATA[
